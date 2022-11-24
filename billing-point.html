@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Punct de facturare - TSL</title>
+</head>
+<body>
+    <div class="nav_dock">
+        <a href="/dashboard.html" class="admin_panel">Panou de Administrare</a>
+        <a href="/billing-point.html" class="billing_point">Punct de Facturare</a>
+        <a href="#" class="payments_vrf">Punct de verificare plati</a>
+        <div class="verticalLine"></div>
+        <a href="/profile-edit.html" class="profile_edit">Editare Profil</a>
+    </div>
+    <div class="billing_details">
+        <form method="get">
+            <input type="text" id="" placeholder="Cumpărător" required>
+            <br>
+            <input type="text" id="" placeholder="Sediul cumpărătorului" required>
+            <br>
+            <label class="date">Data: </label>
+            <input type="date" id="" required>
+            <br>
+            <input type="text" id="" placeholder="Nume serviciu prestat" required>
+            <br>
+            <input type="number" id="" placeholder="Preț" required> 
+            <br>
+            <input type="text" id="" placeholder="Preț fără TVA" required>
+            <br>
+            <input type="number" id="" placeholder="Numar factură" required>
+            <br>
+            <input type="text" id="" placeholder="Județul cumpărătorului" required>
+            <br>
+            <input type="text" id="" placeholder="Banca cumpărătorului" required>
+            <br>
+            <button onclick="billing()">Generează factură</button>
+        </form>
+    </div>
+</body>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background-color: white;
+    }
+    .nav_dock {
+      position: fixed;
+      background-color: black;
+      width: 730px;
+      height: 50px;
+      border-top-left-radius: 0.3cm;
+      border-top-right-radius: 0.3cm;
+      border-bottom-left-radius: 0.3cm;
+      border-bottom-right-radius: 0.3cm;
+      left: 30%;
+      top: 90%;
+    }
+    .admin_panel {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      position: absolute;
+      opacity: 70%;
+      transition: 0.5s;
+      left: 2%;
+      top: 25%;
+    }
+    .admin_panel:hover {
+      opacity: 100%;
+    }
+    .billing_point {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.5s;
+      opacity: 70%;
+      left: 27.5%;
+      top: 25%;
+    }
+    .billing_point:hover {
+      opacity: 100%;
+    }
+    .payments_vrf {
+      position: absolute;
+      color: white;
+      opacity: 70%;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.5s;
+      left: 50%;
+      top: 25%;
+    }
+    .payments_vrf:hover {
+      opacity: 100%;
+    }
+    .profile_edit {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+      opacity: 70%;
+      font-size: 15px;
+      top: 25%;
+      left: 83%;
+    }
+    .profile_edit:hover {
+      opacity: 100%;
+    }
+    .verticalLine {
+      border-left: 2.5px solid rgb(56, 56, 56);
+      height: 50px;
+      position: absolute;
+      left: 78%;
+    }
+</style>
+<script src="/billing.js"></script>
+</html>

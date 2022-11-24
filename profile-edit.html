@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editare Profil - TSL</title>
+  <script src="/dashboard.js"></script>
+</head>
+
+<body>
+  <div class="nav_dock">
+    <a href="/dashboard.html" class="admin_panel">Panou de Administrare</a>
+    <a href="/billing-point.html" class="billing_point">Punct de Facturare</a>
+    <a href="#" class="payments_vrf">Punct de verificare plati</a>
+    <div class="verticalLine"></div>
+    <a href="/profile-edit.html" class="profile_edit">Editare Profil</a>
+  </div>
+  <div class="content">
+    <h1 class="msg1">Bună ziua,domnule Administrator vom edita în cel mai scurt timp profilul dvs.!</h1>
+    <div class="edit-profile-form">
+      <form>
+        <label class="form_title">Schimbarea datelor:</label>
+        <br>
+        <label class="change_tag">
+          Schimbă-ți TSL tag-ul:
+        </label>
+        <input class="chg-tsltg" type="text" id="chg_TSLtg" placeholder="Introdu noul tău TAG" required>
+        <button class="update_btn" onclick="chg_tsltg()">Actualizare</button>
+      </form>
+    </div>
+  </div>
+</body>
+<style>
+  .update_btn{
+    position:absolute;
+    top:75%;
+    left:35%;
+    width: 2.5cm;
+    height: 0.9cm;  
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    border-bottom-left-radius: 0.2cm;
+    border-bottom-right-radius: 0.2cm;
+    background-color: white;
+    border: 1;
+    transition: .5s;
+  }
+  .chg-tsltg{
+    position:absolute;
+    left:36.5%;
+    top:14.5%;
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    border-bottom-left-radius: 0.2cm;
+    border-bottom-right-radius: 0.2cm;
+  }
+  .chg-tsltg::placeholder{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position:absolute;
+    left:2%;
+  }
+  .change_tag {
+    font-size: 13px;
+    font-weight: 400;
+    position: absolute;
+    left: 2%;
+    top: 15%;
+  }
+
+  .form_title {
+    font-weight: 500;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+  }
+
+  .edit-profile-form {
+    background-color: whitesmoke;
+    width: 10cm;
+    height: 5cm;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    border-top-left-radius: 0.5cm;
+    border-top-right-radius: 0.5cm;
+    border-bottom-left-radius: 0.5cm;
+    border-bottom-right-radius: 0.5cm;
+    box-shadow: 1px 3px 3px 2px rgba(20, 20, 20, 0.4);
+  }
+
+  .msg1 {
+    font-size: 20px;
+    position: absolute;
+    left: 2.5%;
+  }
+
+  .nav_dock {
+    position: fixed;
+    background-color: black;
+    width: 730px;
+    height: 50px;
+    border-top-left-radius: 0.3cm;
+    border-top-right-radius: 0.3cm;
+    border-bottom-left-radius: 0.3cm;
+    border-bottom-right-radius: 0.3cm;
+    left: 30%;
+    top: 90%;
+  }
+
+  .admin_panel {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    position: absolute;
+    opacity: 70%;
+    transition: 0.5s;
+    left: 2%;
+    top: 25%;
+  }
+
+  .admin_panel:hover {
+    opacity: 100%;
+  }
+
+  .billing_point {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+    opacity: 70%;
+    left: 27.5%;
+    top: 25%;
+  }
+
+  .billing_point:hover {
+    opacity: 100%;
+  }
+
+  .payments_vrf {
+    position: absolute;
+    color: white;
+    opacity: 70%;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+    left: 50%;
+    top: 25%;
+  }
+
+  .payments_vrf:hover {
+    opacity: 100%;
+  }
+
+  .profile_edit {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 70%;
+    font-size: 15px;
+    top: 25%;
+    left: 83%;
+  }
+
+  .profile_edit:hover {
+    opacity: 100%;
+  }
+
+  .verticalLine {
+    border-left: 2.5px solid rgb(56, 56, 56);
+    height: 50px;
+    position: absolute;
+    left: 78%;
+  }
+</style>
+
+</html>

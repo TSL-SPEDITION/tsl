@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prima pagină - TSL</title>
+    <link rel="stylesheet" href="./index_ro.css">
+    <link rel="stylesheet" href="./chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <img class="moto_img" src="./Assets/moto_img.png">
+    <div class="nav-bar">
+        <nav>
+            <img src="./Assets/LOGO NOU.png" alt="Ne pare rău,nu putem afișa aceasta imagine!">
+            <a class="home_btn" href="./index.html">ACASĂ</a>
+            <a class="contact_btn" href="./contact.html">CONTACT</a>
+            <a class="connect_btn" href="./conectare.html">CONECTARE</a>
+        </nav>
+    </div>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Discută cu noi!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+                        <div class="bot_info">
+                            <img class="backround_chat" src="./Assets/Screenshot 2022-07-30 205430.png">
+                            <img class="active_image" src="./Assets/Greenlight-LOGO-RGB_colour_dark.png">
+                            <ph class="info_bot">Activ acum</ph>
+                            <img class="user_img" src="./Assets/a.png">
+                            <ph class="nickname_bot">TSL</ph>
+                            <ph class="bot_name">TRADE SPEDITION LOGISTIK</ph>
+                        </div>
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Apasă 'Enter' pentru a trimite un mesaj">
+                                <p></p>
+                            </div>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    <div>
+        <img class="daf_red" src="./Assets/daf_red.jpg">
+        <ph class="daf_red_txt">Transport național de mărfuri</ph>
+    </div>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./responses.js"></script>
+<script src="./chat.js"></script>
+<script src="./index.js"></script>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-bar {
+        background-color: #f6f6f6;
+        width: 100%;
+    }
+
+    .home_btn {
+        position: absolute;
+        left: 7cm;
+        top: 0.9cm;
+        color: black;
+        text-decoration: none;
+        transition: .5s;
+        opacity: 70%;
+    }
+
+    .home_btn:hover {
+        opacity: 100%;
+    }
+
+    .contact_btn {
+        position: absolute;
+        color: black;
+        left: 10cm;
+        top: 0.9cm;
+        text-decoration: none;
+        transition: .5s;
+        opacity: 70%;
+    }
+
+    .username_label {
+        font-family: 'Muli', sans-serif;
+        font-size: 15px;
+
+    }
+
+    .password_label {
+        font-family: 'Muli', sans-serif;
+        font-size: 15px;
+    }
+
+    .contact_btn:hover {
+        opacity: 100%;
+    }
+
+    .input-box {
+        width: 8cm;
+    }
+
+    .user_img {
+        position: absolute;
+        width: 2cm;
+        top: -6.2cm;
+        right: 7.1cm;
+    }
+
+    .active_image {
+        width: 0.5cm;
+        position: absolute;
+        top: -5.1cm;
+        left: 2.3cm;
+    }
+
+    .info_bot {
+        position: absolute;
+        top: -5.1cm;
+        left: 2.7cm;
+    }
+
+    .bot_name {
+        position: absolute;
+        top: -5.5cm;
+        width: 6cm;
+        right: 1.6cm;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 12.5px;
+    }
+
+    .nickname_bot {
+        position: absolute;
+        top: -5.9cm;
+        right: 6.1cm;
+    }
+
+    .backround_chat {
+        position: absolute;
+        top: -6.3cm;
+        right: 0cm;
+    }
+
+    .conecct_btn {
+        position: absolute;
+        top: 0.5cm;
+        color: black;
+        text-decoration: none;
+        left: 90%;
+        opacity: 70%;
+        transition: .5s;
+        width: 2.5cm;
+        background-color: #f6f6f6;
+    }
+
+    .moto_img {
+        position: absolute;
+        width: 20cm;
+        left: 25%;
+        top: 14cm;
+    }
+
+    .daf_red {
+        width: 9cm;
+        height: 6cm;
+        position: absolute;
+        top: 4cm;
+        left: 40%;
+    }
+
+    .daf_red_txt {
+        position: absolute;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        left: 43.5%;
+        top: 10.2cm;
+    }
+
+    .adr_tr {
+        position: absolute;
+        width: 9cm;
+        left: 14cm;
+        top: 3.9cm;
+    }
+
+    .adr_tr_txt {
+        position: absolute;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        left: 15.6cm;
+        top: 10cm;
+        color: black;
+        text-decoration: none;
+    }
+
+    .adr_tr_txt_1 {
+        color: black;
+        text-decoration: none;
+    }
+
+    .connect_btn {
+        position: absolute;
+        left: 90%;
+        top: 0.9cm;
+        color: black;
+        text-decoration: none;
+        transition: .5s;
+        opacity: 70%;
+    }
+
+    .home_btn:hover {
+        opacity: 100%;
+    }
+
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 50px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .collapsible {
+        background-color: rgb(82, 151, 255);
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 350px;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        border-radius: 10px 10px 0px 0px;
+        border: 3px solid white;
+        border-bottom: none;
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+    }
+
+    .full-chat-block {
+        width: 350px;
+        background: white;
+        text-align: center;
+        overflow: auto;
+        scrollbar-width: none;
+        height: max-content;
+        transition: max-height 0.2s ease-out;
+    }
+
+    .outer-container {
+        min-height: 500px;
+        bottom: 0%;
+        position: relative;
+    }
+
+    .chat-container {
+        max-height: 500px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        scroll-behavior: smooth;
+        hyphens: auto;
+    }
+
+    .chat-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chat-bar-input-block {
+        display: flex;
+        float: left;
+        box-sizing: border-box;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        background-color: rgb(235, 235, 235);
+        border-radius: 10px 10px 0px 0px;
+        padding: 10px 0px 10px 10px;
+    }
+
+    .chat-bar-icons {
+        display: flex;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+        width: 25%;
+        float: right;
+        font-size: 20px;
+    }
+
+    #chat-icon:hover {
+        opacity: .7;
+    }
+
+    /* Chat bubbles */
+
+    #userInput {
+        width: 75%;
+    }
+
+    .input-box {
+        float: left;
+        border: none;
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 16px;
+        color: #000;
+        background-color: white;
+        outline: none
+    }
+
+    .userText {
+        color: white;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: normal;
+        text-align: right;
+        clear: both;
+    }
+
+    .userText span {
+        line-height: 1.5em;
+        display: inline-block;
+        background: #5ca6fa;
+        padding: 10px;
+        border-radius: 8px;
+        border-bottom-right-radius: 2px;
+        max-width: 80%;
+        margin-right: 10px;
+        animation: floatup .5s forwards
+    }
+
+    .botText {
+        color: #000;
+        font-family: Helvetica;
+        font-weight: normal;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .botText span {
+        line-height: 1.5em;
+        display: inline-block;
+        background: #e0e0e0;
+        padding: 10px;
+        border-radius: 8px;
+        border-bottom-left-radius: 2px;
+        max-width: 80%;
+        margin-left: 10px;
+        animation: floatup .5s forwards
+    }
+
+    @keyframes floatup {
+        from {
+            transform: translateY(14px);
+            opacity: .0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .full-chat-block {
+            width: 100%;
+            border-radius: 0px;
+        }
+
+        .chat-bar-collapsible {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .collapsible {
+            width: 100%;
+            border: 0px;
+            border-top: 3px solid white;
+            border-radius: 0px;
+        }
+    }
+</style>
+<style>
+
+</style>
+<script>
+    //response script
+    function getBotResponse(input) {
+        if (input == "1") {
+            return "Ce tip de marfă aveți de transportat? [I] non-ADR; [II] ADR;";
+        } else if (input == "I") {
+            return "Pentru a transporta marfa NON-ADR vă rugăm sa ne contactați pe e-mail laurentiuenache19@yahoo.ro sau la telefon 0766338110 sau 0724799133,sau pe pagina noastră de contact,completați formularul,Vă mulțumim!";
+        } else if (input == "II") {
+            return "Pentru a transporta marfă ADR vă rugam să ne contactați pe e-mail laurentiuenache19@yahoo.ro sau la telefon 0724799133 sau 0766338110,sau pe pagina noastră de contact,completați formularul,Vă mulțumim!\n";
+        }
+        if (input == "2") {
+            return "Ok, puteți să ne contactați la telefon 0724799133 sau 0766338110,sau pe pagina noastră de contact,completați formularul,Vă mulțumim!";
+        }
+        if (input == "3") {
+            return "OK,La revedere!";
+        }
+    }
+
+    //chat script
+    // Collapsible
+    var coll = document.getElementsByClassName("collapsible");
+
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            var content = this.nextElementSibling;
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+        });
+    }
+
+    function getTime() {
+        let today = new Date();
+        hours = today.getHours();
+        minutes = today.getMinutes();
+
+        if (hours < 10) {
+            hours = "0" + hours;
+        }
+
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+
+        let time = hours + ":" + minutes;
+        return time;
+    }
+
+    // Gets the first message
+    function firstBotMessage() {
+        let firstMessage = "Bine ai venit la TRADE SPEDITION LOGISTIK!Scrie numarul de opțiune dorit!\n[1] Avem nevoie de servicii de transport; \n[2] Dorim să luăm legaătura telefonică/electronică cu dvs.; [3] Ieșire";
+        document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+        let time = getTime();
+
+        $("#chat-timestamp").append(time);
+        document.getElementById("userInput").scrollIntoView(false);
+    }
+
+    firstBotMessage();
+
+    // Retrieves the response
+    function getHardResponse(userText) {
+        let botResponse = getBotResponse(userText);
+        let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+        $("#chatbox").append(botHtml);
+
+        document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    }
+
+    //Gets the text text from the input box and processes it
+    function getResponse() {
+        let userText = $("#textInput").val();
+
+        if (userText == "") {
+            alert("Nu puteți trimite mesaje fară conținut!");
+        }
+
+        let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+        $("#textInput").val("");
+        $("#chatbox").append(userHtml);
+        document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+        setTimeout(() => {
+            getHardResponse(userText);
+        }, 2000)
+
+    }
+
+    // Handles sending text via button clicks
+    function buttonSendText(sampleText) {
+        let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+
+        $("#textInput").val("");
+        $("#chatbox").append(userHtml);
+        document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+        //Uncomment this if you want the bot to respond to this buttonSendText event
+        setTimeout(() => {
+            getHardResponse(sampleText);
+        }, 1000)
+    }
+
+    function sendButton() {
+        getResponse();
+    }
+    // Press enter to send a message
+    $("#textInput").keypress(function (e) {
+        if (e.which == 13) {
+            getResponse();
+        }
+    });
+</script>
+
+</html>

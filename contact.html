@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conctact - TSL</title>
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <nav>
+        <img
+          src="./Assets/LOGO NOU.png"
+          alt="Ne pare rău,nu putem afișa aceasta imagine!"
+        />
+        <a class="home_btn" href="./index.html">ACASĂ</a>
+        <a class="contact_btn" href="./contact.html">CONTACT</a>
+        <a class="connect_btn" href="./conectare.html">CONECTARE</a>
+      </nav>
+    </div>
+    <div class="contact_posibilities">
+      <label class="contact_lbl">Contact</label>
+      <label class="phone"
+        >Ne puteți contacta la urmatoarele numere de telefon:</label
+      >
+      <a class="phone1" href="tel:0766338110">0766338110</a>
+      <a class="phone20" href="tel:0724799133">0724799133</a>
+      <label class="alternative">Ne puteți contacta asemenea pe email:</label>
+      <a href="mailto:laurentiuenache19@yahoo.com" class="email"
+        >laurentiuenache19@yahoo.com</a
+      >
+    </div>
+  </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .alternative {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      top: 23%;
+      left: 7%;
+    }
+
+    .email {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      color: black;
+      text-decoration: none;
+      top: 26%;
+      left: 10%;
+    }
+
+    .email:hover {
+      text-decoration: underline;
+    }
+
+    .contact_lbl {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      top: 10%;
+      left: 4%;
+    }
+
+    .phone {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      left: 7%;
+      top: 15%;
+    }
+
+    .phone1 {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      text-decoration: none;
+      color: black;
+      left: 10%;
+      top: 18%;
+    }
+
+    .phone1:hover {
+      text-decoration: underline;
+    }
+
+    .phone20 {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      left: 10%;
+      top: 20%;
+      text-decoration: none;
+      color: black;
+    }
+
+    .phone20:hover {
+      text-decoration: underline;
+    }
+
+    .nav-bar {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    .home_btn {
+      position: absolute;
+      left: 7cm;
+      top: 0.9cm;
+      color: black;
+      text-decoration: none;
+      transition: 0.5s;
+      opacity: 70%;
+    }
+
+    .home_btn:hover {
+      opacity: 100%;
+    }
+
+    .contact_btn {
+      position: absolute;
+      color: black;
+      left: 10cm;
+      top: 0.9cm;
+      text-decoration: none;
+      transition: 0.5s;
+      opacity: 70%;
+    }
+
+    .contact_btn:hover {
+      opacity: 100%;
+    }
+
+    .user_img {
+      position: absolute;
+      width: 2cm;
+      top: -6.2cm;
+      right: 7.1cm;
+    }
+
+    .active_image {
+      width: 0.5cm;
+      position: absolute;
+      top: -5.1cm;
+      left: 2.3cm;
+    }
+
+    .info_bot {
+      position: absolute;
+      top: -5.1cm;
+      left: 2.7cm;
+    }
+
+    .bot_name {
+      position: absolute;
+      top: -5.5cm;
+      width: 6cm;
+      right: 1.6cm;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 12.5px;
+    }
+
+    .nickname_bot {
+      position: absolute;
+      top: -5.9cm;
+      right: 6.1cm;
+    }
+
+    .backround_chat {
+      position: absolute;
+      top: -6.3cm;
+      right: 0cm;
+    }
+
+    .conecct_btn {
+      position: absolute;
+      top: 0.5cm;
+      color: black;
+      text-decoration: none;
+      left: 90%;
+      opacity: 70%;
+      transition: 0.5s;
+      width: 2.5cm;
+      background-color: #f6f6f6;
+    }
+
+    .moto_img {
+      position: absolute;
+      width: 20cm;
+      left: 25%;
+      top: 14cm;
+    }
+
+    .daf_red {
+      width: 9cm;
+      height: 6cm;
+      position: absolute;
+      top: 4cm;
+      left: 40%;
+    }
+
+    .daf_red_txt {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      left: 43.5%;
+      top: 10.2cm;
+    }
+
+    .adr_tr {
+      position: absolute;
+      width: 9cm;
+      left: 14cm;
+      top: 3.9cm;
+    }
+
+    .adr_tr_txt {
+      position: absolute;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      left: 15.6cm;
+      top: 10cm;
+      color: black;
+      text-decoration: none;
+    }
+
+    .adr_tr_txt_1 {
+      color: black;
+      text-decoration: none;
+    }
+
+    .connect_btn {
+      position: absolute;
+      left: 90%;
+      top: 0.9cm;
+      color: black;
+      text-decoration: none;
+      transition: 0.5s;
+      opacity: 70%;
+    }
+
+    .home_btn:hover {
+      opacity: 100%;
+    }
+
+    .chat-bar-collapsible {
+      position: fixed;
+      bottom: 0;
+      right: 50px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .collapsible {
+      background-color: rgb(82, 151, 255);
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 350px;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      border-radius: 10px 10px 0px 0px;
+      border: 3px solid white;
+      border-bottom: none;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #f1f1f1;
+    }
+
+    .full-chat-block {
+      width: 350px;
+      background: white;
+      text-align: center;
+      overflow: auto;
+      scrollbar-width: none;
+      height: max-content;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .outer-container {
+      min-height: 500px;
+      bottom: 0%;
+      position: relative;
+    }
+
+    .chat-container {
+      max-height: 500px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      scroll-behavior: smooth;
+      hyphens: auto;
+    }
+
+    .chat-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .chat-bar-input-block {
+      display: flex;
+      float: left;
+      box-sizing: border-box;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      background-color: rgb(235, 235, 235);
+      border-radius: 10px 10px 0px 0px;
+      padding: 10px 0px 10px 10px;
+    }
+
+    .chat-bar-icons {
+      display: flex;
+      justify-content: space-evenly;
+      box-sizing: border-box;
+      width: 25%;
+      float: right;
+      font-size: 20px;
+    }
+
+    #chat-icon:hover {
+      opacity: 0.7;
+    }
+
+    /* Chat bubbles */
+
+    #userInput {
+      width: 75%;
+    }
+
+    .input-box {
+      float: left;
+      border: none;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+      color: #000;
+      background-color: white;
+      outline: none;
+    }
+
+    .userText {
+      color: white;
+      font-family: Helvetica;
+      font-size: 16px;
+      font-weight: normal;
+      text-align: right;
+      clear: both;
+    }
+
+    .userText span {
+      line-height: 1.5em;
+      display: inline-block;
+      background: #5ca6fa;
+      padding: 10px;
+      border-radius: 8px;
+      border-bottom-right-radius: 2px;
+      max-width: 80%;
+      margin-right: 10px;
+      animation: floatup 0.5s forwards;
+    }
+
+    .botText {
+      color: #000;
+      font-family: Helvetica;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .botText span {
+      line-height: 1.5em;
+      display: inline-block;
+      background: #e0e0e0;
+      padding: 10px;
+      border-radius: 8px;
+      border-bottom-left-radius: 2px;
+      max-width: 80%;
+      margin-left: 10px;
+      animation: floatup 0.5s forwards;
+    }
+
+    @keyframes floatup {
+      from {
+        transform: translateY(14px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+      }
+
+      .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+      }
+
+      .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+      }
+    }
+  </style>
+</html>
