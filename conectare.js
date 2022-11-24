@@ -2,12 +2,18 @@ function connect() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
+
   if(username == "admin" || password == "antonia54")
   { 
-    window.location.href('https://www.google.com');
-    return 0;
+    alert("Logarea a avut loc cu succes!Te vom redirecționa la Pagina de Administrare!")
+    window.location.href = "http://tsl-spedition.github.io/tsl/dashboard.html";
+  }else
+  {
+    alert("Logare eșuată!Te ducem la pagina principala!")
+    window.location.href = "http://tsl-spedition.github.io/tsl/";
   }
 }
+
 
 //firebase option
 
