@@ -7,10 +7,12 @@ function connect() {
   { 
     alert("Logarea a avut loc cu succes!Te vom redirecționa la Pagina de Administrare!")
     window.location.href = "http://tsl-spedition.github.io/tsl/dashboard.html";
+    return 0;
   }else
   {
     alert("Logare eșuată!Te ducem la pagina principala!")
     window.location.href = "http://tsl-spedition.github.io/tsl/";
+    return 0;
   }
 }
 
