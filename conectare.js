@@ -2,50 +2,12 @@ function connect() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
 
-
-  if(username == "admin" || password == "antonia54")
-  { 
-    alert("Logarea a avut loc cu succes!Te vom redirecționa la Pagina de Administrare!")
-    window.location.href = "http://tsl-spedition.github.io/tsl/dashboard.html";
-    return 0;
-  }else
-  {
-    alert("Logare eșuată!Te ducem la pagina principala!")
+  if (username != "admin" || password != "antonia54") {
     window.location.href = "http://tsl-spedition.github.io/tsl/";
-    return 0;
+    alert("Logarea nu a avut succes,te redirecționăm la pagna principala!");
+    return false;
+  } else{
+    window.location.href = "http://tsl-spedition.github.io/tsl/dashboard.html";
+    alert("Vă redirecționăm la Panoul de Admistrare!")
   }
 }
-
-
-//firebase option
-
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// // TODO: Add SDKs for Firebase products that you want to use
-// // https://firebase.google.com/docs/web/setup#available-libraries
-
-// // Your web app's Firebase configuration
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCY-qa7t_e7_TIwWz8confOdNJ6JrKMxho",
-//   authDomain: "logintsl.firebaseapp.com",
-//   projectId: "logintsl",
-//   storageBucket: "logintsl.appspot.com",
-//   messagingSenderId: "508113769785",
-//   appId: "1:508113769785:web:e3047e36e7d04afb1e04e8"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-
-// const auth = firebase.auth()
-
-// function connect() {
-//   var email = document.getElementById("email");
-//   var password = document.getElementById("password");
-//   const promise = auth.signInWithEmailAndPassword(
-//     email.value, password.value);
-//   promise.catch((e) => alert(e.message));
-
-//   alert("Conectat!")
-// }
-
