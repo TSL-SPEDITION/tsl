@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prima Pagina - TSL</title>
+</head>
+
+<body>
+  <!-- Logo Initialize -->
+  <img src="https://i.postimg.cc/Hnyb9ZRb/LOGO-NOU-1-removebg-preview.png" class="logo">
+  <!-- Initialize the UI navbar -->
+  <div class="nav">
+    <a href="./index.html"><img src="https://i.postimg.cc/Nf5H1qG2/home-1.png" class="home_btn" /></a>
+    <a href="./contact.html"><img src='https://i.postimg.cc/ZR4xbWxk/phone-call.png' class="contact_btn" /></a>
+    <a href='./review.html'><img src='https://i.postimg.cc/3wv0sYss/review.png' alt='review' class="review_btn" /></a>
+    <a href="./conectare.html"><img src="https://i.postimg.cc/3xbbGgKh/user-1.png" class="login_btn" /></a>
+  </div>
+  <div class="content">
+    <!-- Moto -->
+    <blockquote>Pentru transportul marfurilor tale, alege experienta si profesionalismul nostru.</blockquote>
+    <!-- Images and Descriptions -->
+        <!-- First Image with text included -->
+    <img class="sunset_img" src="https://i.postimg.cc/MKVNtFKd/image.png"></img>
+    <ph class="sunset_text">Transport rutier de marfuri,national!</ph>
+        <!-- Second Image with text included -->
+    <img class="adr_img" src="https://i.postimg.cc/MKy5JNL4/image.png">
+    <ph class="adr_text">Transport marfuri periculoase ADR</ph>
+
+  </div>
+</body>
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+  }
+
+  .logo{
+    position:absolute;
+
+  }
+
+  .adr_img{
+    position:absolute;
+    left:55%; 
+    top: 10%;
+    width: 400px;
+    border-top-left-radius: 1cm;
+    border-top-right-radius: 1cm;
+    border-bottom-left-radius: 1cm;
+    border-bottom-right-radius: 1cm;
+    transition: .5s;
+  }
+
+  .adr_img:hover{
+    opacity: 60%;
+  }
+
+  .adr_text{
+    position:absolute;
+    left:58.5%;
+    top:35%;
+    font-size:17.5px;
+  }
+
+  .sunset_img {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    border-top-left-radius: 1cm;
+    border-top-right-radius: 1cm;
+    border-bottom-left-radius: 1cm;
+    border-bottom-right-radius: 1cm;
+    transition: .5s;
+  }
+
+  .sunset_img:hover {
+    opacity: 60%;
+  }
+
+  .sunset_text {
+    position: absolute;
+    top: 35%;
+    left: 18%;
+    font-size: 17.5px;
+  }
+
+  @media only screen and (max-device-width:480px)
+  {
+    .logo{
+      position:absolute;
+      left:20%;
+    }
+  }
+
+  @media only screen and (max-device-width:480px)
+  {
+    .adr_img{
+      position: absolute;
+      left:1.5%;
+      top: 40%;
+    }
+    .adr_text{
+      position:absolute;
+      top:66%;
+      left: 20%;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-device-width:480px) {
+    .sunset_img {
+      position: absolute;
+      width: 350px;
+      left: 8%;
+      top: 10%;
+      border-top-left-radius: 1cm;
+      border-top-right-radius: 1cm;
+      border-bottom-left-radius: 1cm;
+      border-bottom-right-radius: 1cm;
+      transition: .5s;
+    }
+    .sunset_img:hover{
+      opacity: 60%;;
+    }
+    .sunset_text{
+      top:33%;
+    }
+  }
+
+  .nav {
+    background-color: rgb(209, 209, 209);
+    width: 6cm;
+    height: 1cm;
+    position: fixed;
+    left: 40%;
+    top: 90%;
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    border-bottom-left-radius: 0.2cm;
+    border-bottom-right-radius: 0.2cm;
+  }
+
+  blockquote {
+    background: #DDD;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.35);
+    border-left: 10px solid #ccc;
+    border-right: 10px solid #ccc;
+    margin: 20px 10px;
+    padding: 10px;
+    position: absolute;
+    right: 37%;
+    top: 55%;
+    text-align: center;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    .nav {
+      background-color: rgb(209, 209, 209);
+      width: 6cm;
+      height: 1cm;
+      position: absolute;
+      left: 22.5%;
+      top: 93%;
+      border-top-left-radius: 0.2cm;
+      border-top-right-radius: 0.2cm;
+      border-bottom-left-radius: 0.2cm;
+      border-bottom-right-radius: 0.2cm;
+    }
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    blockquote {
+      position: absolute;
+      right: 1%;
+      text-align: center;
+      top: 70%;
+    }
+  }
+
+  .home_btn {
+    width: 30px;
+    position: absolute;
+    top: 9%;
+    left: 10%;
+    opacity: 70%;
+    transition: 0.5s;
+  }
+
+  .home_btn:hover {
+    opacity: 100%;
+  }
+
+  .login_btn {
+    width: 30px;
+    position: absolute;
+    top: 9%;
+    left: 75%;
+    opacity: 70%;
+    transition: 0.5s;
+  }
+
+  .login_btn:hover {
+    opacity: 100%;
+  }
+
+  .contact_btn {
+    width: 30px;
+    position: absolute;
+    left: 30%;
+    top: 9%;
+    opacity: 70%;
+    transition: .5s;
+  }
+
+  .contact_btn:hover {
+    opacity: 100%;
+  }
+
+  .review_btn {
+    position: absolute;
+    left: 52.5%;
+    width: 30px;
+    top: 9%;
+    transition: .5s;
+  }
+
+  .review_btn:hover {
+    opacity: 100%;
+  }
+</style>
+
+</html>
