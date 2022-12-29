@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recenzii - TSL</title>
+</head>
+
+<body>
+    <div class="up">
+        <a href=""><img class="logo" src="https://i.postimg.cc/Hnyb9ZRb/LOGO-NOU-1-removebg-preview.png"></a>
+    </div>
+    <div class="nav">
+        <a href="./index.html"><img src="https://i.postimg.cc/Nf5H1qG2/home-1.png" class="home_btn" /></a>
+        <a href="./contact.html"><img src='https://i.postimg.cc/ZR4xbWxk/phone-call.png' class="contact_btn" /></a>
+        <a href='./review.html'><img src='https://i.postimg.cc/3wv0sYss/review.png' alt='review'
+                class="review_btn" /></a>
+        <a href="./conectare.html"><img src="https://i.postimg.cc/3xbbGgKh/user-1.png" class="login_btn" /></a>
+    </div>
+    <div class="content">
+        <h3 class="title">Dorești să lași un review?</h3>
+        <ph class="description">Scrie în formularul de mai jos,părerea ta despre calitatea serviciilor noastre!</ph>
+        <form id="review">
+            <input type="text" placeholder="Numele complet" id="name" required>
+            <input type="email" placeholder="Email-ul tău" id="email" required>
+            <ph for="star" id="cer1">Selecteaza numarul de stele care ni le vei acorda: </ph>
+            <select name="star" id="star_rating">
+                <option value="none">niciun element</option>
+                <option id="opt_1" value="one_star">1 Stea &#9733;</option>
+                <option value="2_stars" id="opt_2">2 Stele &#9733;&#9733;</option>
+                <option value="3_stars" id="opt_3">3 Stele &#9733;&#9733;&#9733;</option>
+                <option value="4_stars" id="opt_4">4 Stele &#9733;&#9733;&#9733;&#9733;</option>
+                <option value="5_stars" id="opt_5">5 Stele &#9733;&#9733;&#9733;&#9733;&#9733;</option>
+            </select>
+            <ph id="cer2">Introdu o scurtă motivare a acestei recenzi: </ph>
+            <textarea placeholder="Introdu motivarea..." id="motiv"></textarea>
+            <button id="send_review" onclick="review()">Trimite recenzia</button>
+            <label id="annoucement">* Timpul de prelucrare a recenziei poate dura pana la 72 ore</label>
+        </form>
+    </div>
+</body>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'poppins', sans-serif;
+    }
+
+    #cer1 {
+        position: absolute;
+        top: 30.5%;
+        left: 12.5%
+    }
+
+    #cer2 {
+        position: absolute;
+        top: 40%;
+        left: 12.5%;
+    }
+
+    #motiv {
+        height: 3.5cm;
+        width: 9cm;
+        position: absolute;
+        top: 43%;
+        left: 17%;
+
+    }
+
+    #motiv::placeholder {
+        font-family: 'poppins', sans-serif;
+        font-size: 16.5px;
+    }
+
+    #send_review {
+        position: absolute;
+        top: 61%;
+        left: 20%;
+        background-color: grey;
+        color: white;
+        border: grey;
+        margin: grey;
+        width: 5cm;
+        height: 1cm;
+        border-top-left-radius: 0.2cm;
+        border-top-right-radius: 0.2cm;
+        border-bottom-left-radius: 0.2cm;
+        border-bottom-right-radius: 0.2cm;
+        font-size: 16.5px;
+        transition: .5s;
+    }
+
+    #send_review:hover {
+        color: black;
+        background-color: whitesmoke;
+    }
+
+    #annoucement {
+        color: red;
+        position: absolute;
+        top: 58%;
+        left: 1%;
+    }
+
+    #star_rating {
+        position: absolute;
+        top: 34%;
+        left: 21%;
+        width: 4cm;
+        height: 0.7cm;
+    }
+
+    .title {
+        position: absolute;
+        left: 5%;
+        font-size: 20px;
+    }
+
+    .description {
+        position: absolute;
+        top: 14.5%;
+        left: 7.5%;
+        font-size: 20px;
+    }
+
+    .nav {
+        background-color: rgb(209, 209, 209);
+        width: 6cm;
+        height: 1cm;
+        position: fixed;
+        left: 40%;
+        top: 90%;
+        border-top-left-radius: 0.2cm;
+        border-top-right-radius: 0.2cm;
+        border-bottom-left-radius: 0.2cm;
+        border-bottom-right-radius: 0.2cm;
+    }
+
+    #name {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        height: 0.7cm;
+        width: 5cm;
+    }
+
+    #name::placeholder {
+        font-size: 15px;
+    }
+
+    #email {
+        position: absolute;
+        top: 25%;
+        width: 5cm;
+        height: 0.7cm;
+        left: 20%;
+    }
+
+    #email::placeholder {
+        font-size: 15px;
+    }
+
+    @media only screen and (max-device-width:480px) {
+        .nav {
+            background-color: rgb(209, 209, 209);
+            width: 6cm;
+            height: 1cm;
+            position: absolute;
+            left: 22.5%;
+            top: 93%;
+            border-top-left-radius: 0.2cm;
+            border-top-right-radius: 0.2cm;
+            border-bottom-left-radius: 0.2cm;
+            border-bottom-right-radius: 0.2cm;
+        }
+
+        .logo {
+            position: absolute;
+            left: 20%;
+        }
+
+        .title {
+            position: absolute;
+            top: 10%;
+        }
+
+        .description {
+            font-size: 15px;
+            position: absolute;
+            text-align: center;
+            left: 1%;
+            top: 16%;
+
+        }
+
+        #cer1 {
+            position: absolute;
+            left: 6%;
+        }
+
+        #star_rating {
+            position: absolute;
+            left: 27.5%;
+        }
+
+        #name {
+            position: absolute;
+            left: 25%;
+        }
+
+        #email {
+            position: absolute;
+            left: 25%;
+        }
+
+        #motiv {
+            position: absolute;
+            left: 9%;
+        }
+
+        #annoucement {
+            top: 60%;
+            text-align: center;
+        }
+
+        #send_review {
+            top: 66%;
+            left: 27.5%;
+        }
+    }
+
+    .home_btn {
+        width: 30px;
+        position: absolute;
+        top: 9%;
+        left: 10%;
+        opacity: 70%;
+        transition: 0.5s;
+    }
+
+    .home_btn:hover {
+        opacity: 100%;
+    }
+
+    .login_btn {
+        width: 30px;
+        position: absolute;
+        top: 9%;
+        left: 75%;
+        opacity: 70%;
+        transition: 0.5s;
+    }
+
+    .login_btn:hover {
+        opacity: 100%;
+    }
+
+    .contact_btn {
+        width: 30px;
+        position: absolute;
+        left: 30%;
+        top: 9%;
+        opacity: 70%;
+        transition: .5s;
+    }
+
+    .contact_btn:hover {
+        opacity: 100%;
+    }
+
+    .review_btn {
+        position: absolute;
+        left: 52.5%;
+        width: 30px;
+        top: 9%;
+        transition: .5s;
+    }
+
+    .review_btn:hover {
+        opacity: 100%;
+    }
+</style>
+<script>
+    function review() {
+        var username = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var stars = document.getElementById("star_rating").value;
+        var args = document.getElementById("motiv").value;
+
+        // user data settings
+
+        if (username == "") {
+            alert("Introdu numele tau!")
+            console.log("Name is not completed!")
+        }
+
+        // stars settings
+
+        if (stars == "none") {
+            alert("Introdu stelele care doresti să ni le acorzi.")
+            console.log("Stars is none")
+        }
+
+        if (stars == "one_star") 
+        {
+            alert("Ne pare rău că ai o parere nu prea potrivită pentru noi.Mulțumim pentru părerea dvs. , răspunsul a fost trimis catre un operator disponibil spre verificare.")
+        }
+
+        if(stars == "opt_2")
+        {
+            alert("Ne pare rău că ai o parere nu prea potrivită pentru noi.Mulțumim pentru părerea dvs. , răspunsul a fost trimis catre un operator disponibil spre verificare.")
+        }
+
+        if(stars == "opt_3")
+        {
+            alert("Mulțumim pentru recenzia dvs. , în momentul de față a fost trimis către verificare!")
+        }
+        if(stars == "opt_4")
+        {
+            alert("Mulțumim pentru această recenzie pozitivă, în acest moment recenzia este în curs de verificare!")
+        }
+        if(stars == "opt_5")
+        {
+            alert("Mulțumim pentru această recenzie pozitivă, în acest moment recenzia este în curs de verificare!");
+        }
+
+        // argumment settings
+
+        if(args == "")
+        {
+            alert("Nu puteti trimite o recenzie fară o descriere!")
+        }
+    }
+</script>
+
+</html>
