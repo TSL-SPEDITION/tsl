@@ -1,167 +1,444 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Punct de facturare - TSL</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Punct de verificare facturi - TSL</title>
 </head>
+
 <body>
-    <div class="nav_dock">
-        <a href="./dashboard.html" class="admin_panel">Panou de Administrare</a>
-        <a href="./billing-point.html" class="billing_point">Punct de Facturare</a>
-        <a href="#" class="payments_vrf">Punct de verificare plati</a>
-        <div class="verticalLine"></div>
-        <a href="./profile-edit.html" class="profile_edit">Editare Profil</a>
-    </div>
-    <div class="content">
-        <input type="text" id="myInput" onkeyup="myFunction ()" placeholder="Search for names.."
-        ‹table id="myTable"> <tr class="header">
-        <th style="width: 60%;">Name</th> <th style="width:40%; ">Country</th>
-        < tr> <tr>
-        <td>Alfreds Futterkiste</td> <td>Germany</td>
-        < tr> <tr>
-        <td>Berglunds snabbkop</td> <td>Sweden</td>
-        < tr>
-        <tr>
-        <td>Island Trading</td> <td>UK</td>
-        </tr> <tr)
-        <td>Koniglich Essen</td> <td>Germany</td>
-        < tr>
-        </table>
-    </div>
+  <div class="nav_dock">
+    <a href="./dashboard.html" class="admin_panel">Panou de Administrare</a>
+    <a href="./billing-point.html" class="billing_point">Punct de Facturare</a>
+    <div class="verticalLine"></div>
+    <a href="./profile-edit.html" class="profile_edit">Editare Profil</a>
+  </div>
+  <input type="text" id="num_inp" onkeyup="num_filter()" placeholder="Caută facutura dupa numărul de factură!">
+  <input type="text" id="str_inp" onkeyup="date_filter()" placeholder="Caută facutura dupa data cumpărătorlui!">
+
+  <table id="myTable">
+    <tr class="header">
+      <th>Număr factura</th>
+      <th>Cumpărator</th>
+      <th>Suma de plata</th>
+      <th>Data întocmiri</th>
+    </tr>
+    <tr>
+      <td>554</td>
+      <td>SC TRANSINTERMED SRL</td>
+      <td>1309 RON</td>
+      <td>22.12.2022</td>
+    </tr>
+    <tr>
+      <td>553</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725,5 RON</td>
+      <td>19.12.2022</td>
+    </tr>
+    <tr>
+      <td>552</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>4046 RON</td>
+      <td>16.12.2022</td>
+    </tr>
+    <tr>
+      <td>551</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>3986,5 RON</td>
+      <td>13.12.2022</td>
+    </tr>
+    <tr>
+      <td>550</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725.5 RON</td>
+      <td>07.12.2022</td>
+    </tr>
+    <tr>
+      <td>549</td>
+      <td>SC GEBRUDER WEISS SRL</td>
+      <td>1666 RON</td>
+      <td>06.12.2022</td>
+    </tr>
+    <tr>
+      <td>548</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725 RON</td>
+      <td>18.11.2022</td>
+    </tr>
+    <tr>
+      <td>547</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>2142 RON</td>
+      <td>17.11.2022</td>
+    </tr>
+    <tr>
+      <td>546</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725.5 RON</td>
+      <td>16.11.2022</td>
+    </tr>
+    <tr>
+      <td>545</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>2142 RON</td>
+      <td>11.11.2022</td>
+    </tr>
+    <tr>
+      <td>544</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>5652.5 RON</td>
+      <td>10.11.2022</td>
+    </tr>
+    <tr>
+      <td>543</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>2142 RON</td>
+      <td>09.11.2022</td>
+    </tr>
+    <tr>
+      <td>542</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725.5 RON</td>
+      <td>07.11.2022</td>
+    </tr>
+    <tr>
+      <td>541</td>
+      <td>SC ANASPED SRL</td>
+      <td>2499 RON</td>
+      <td>04.11.2022</td>
+    </tr>
+    <tr>
+      <td>540</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>4165 RON</td>
+      <td>02.11.2022</td>
+    </tr>
+    <tr> 
+      <td>539</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>5890.5 RON</td>
+      <td>26.10.2022</td>
+    </tr>
+    <tr>
+      <td>538</td>
+      <td>SC ANASPED SRL</td>
+      <td>2737 RON</td>
+      <td>24.10.2022</td>
+    </tr>
+    <tr>
+      <td>537</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725.5 RON</td>
+      <td>21.10.2022</td>
+    </tr>
+    <tr>
+      <td>536</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>4581.5 RON</td>
+      <td>19.10.2022</td>
+    </tr>
+    <tr>
+      <td>535</td>
+      <td>SC ANASPED SRL</td> 
+      <td>2618 RON</td>
+      <td>18.10.2022</td>
+    </tr>
+    <tr>
+      <td>534</td>
+      <td>SC EFE IMPEX 72 SRL</td>
+      <td>1725.5 RON</td>
+      <td>17.10.2022</td>
+    </tr>
+    <tr>
+      <td>533</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>3570 RON</td>
+      <td>14.10.2022</td>
+    </tr>
+    <tr>
+      <td>532</td>
+      <td>SC LOGILAND CARGO SRL</td>
+      <td>3570 RON</td>
+      <td>13.10.2022</td>
+    </tr>
+    <tr>
+      <td>531</td>
+      <td>SC DSV SOLUTIONS SRL</td>
+      <td>1547 RON</td>
+      <td>13.10.2022</td>
+    </tr>
+    <tr>
+      <td>530</td>
+      <td>SC CSC AUTO SRL</td>
+      <td>1666 RON</td>
+      <td>11.10.2022</td>
+    </tr>
+    </tr>
+  </table>
+  <br>
 </body>
 <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-      background-color: white;
-    }
-    #myInput {
-        background-image:
-        url('/css/searchicon.png'); /* Add a search icon to input */
-        background-position: 10px 12px; /*
-        Position the search icon */
-        background-repeat: no-repeat; /* Do not repeat the icon image */
-        width: 100%; /* Full-width */ font-size: 16px; /* Increase font-
-        size */
-        padding: 12px 20px 12px 40px; /* Add some padding */
-        border: 1px solid #ddd; /* Add a grey border */
-        margin-bottom: 12px; /* Add some space below the input */
-        #myTable {
-        border-collapse: collapse; /*
-        Collapse borders */
-        width: 100%; /* Full-width */ border: 1px solid #ddd; /* Add a grey
-        border *
-        font-size: 18px; /* Increase font-size *
-        #myTable th, #myTable td {
-        text-align: left; /* Left-align text
-        */ padding: 12px; /* Add padding */
-    }
-    .nav_dock {
-      position: fixed;
-      background-color: black;
-      width: 730px;
-      height: 50px;
-      border-top-left-radius: 0.3cm;
-      border-top-right-radius: 0.3cm;
-      border-bottom-left-radius: 0.3cm;
-      border-bottom-right-radius: 0.3cm;
-      left: 30%;
-      top: 90%;
-    }
-    #myTable tr {
-    * Add a bottom border to all table rows */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: white;
+  }
+
+  #num_inp {
+    background-image: url('https://i.postimg.cc/bvdJPcwc/image.png');
+
+    background-size: 20px;
+    /* Add a search icon to input */
+    background-position: 19px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 20%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+    position: absolute;
+
+    left: 20%;
+
+    top: 2.5%;
+
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    border-bottom-left-radius: 0.2cm;
+    border-bottom-right-radius: 0.2cm;
+  }
+
+  #str_inp {
+    background-image: url('https://i.postimg.cc/bvdJPcwc/image.png');
+
+    background-size: 20px;
+    /* Add a search icon to input */
+    background-position: 19px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 20%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
+    position: absolute;
+
+    left: 45%;
+
+    top: 2.5%;
+
+    border-top-left-radius: 0.2cm;
+    border-top-right-radius: 0.2cm;
+    border-bottom-left-radius: 0.2cm;
+    border-bottom-right-radius: 0.2cm;
+  }
+
+
+  #myTable {
+    position: absolute;
+
+    left: 12.5%;
+
+    top: 10%;
+    border-collapse: collapse;
+    /* Collapse borders */
+    width: 70%;
+    /* Full-width */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    font-size: 18px;
+    /* Increase font-size */
+    transition:.5s;
+  }
+
+  #myTable th,
+  #myTable td {
+    text-align: left;
+    /* Left-align text */
+    padding: 12px;
+    /* Add padding */
+  }
+
+  #myTable tr {
+    /* Add a bottom border to all table rows */
     border-bottom: 1px solid #ddd;
-    }
-    #myTable tr.header, #myTable tr:hover {
-    /* Add a grey background color to the table header and on hover */ background-color: #f1f1f1;
-    }
-    .admin_panel {
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
+  }
+
+  #myTable tr.header,
+  #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+
+  #serach_box {
+    position: absolute;
+  }
+
+  #serach_btn {
+    position: absolute;
+    border: 0;
+    transition: .5s;
+  }
+
+  #serach_btn:hover {
+    border: 1;
+  }
+
+  #serach_image {
+    width: 30px;
+  }
+
+  .nav_dock {
+    position: absolute;
+    background-color: black;
+    width: 730px;
+    height: 50px;
+    border-top-left-radius: 0.3cm;
+    border-top-right-radius: 0.3cm;
+    border-bottom-left-radius: 0.3cm;
+    border-bottom-right-radius: 0.3cm;
+    left: 30%;
+    top: 135%;
+  }
+
+  .admin_panel {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    position: absolute;
+    opacity: 70%;
+    transition: 0.5s;
+    left: 2%;
+    top: 25%;
+  }
+
+  .admin_panel:hover {
+    opacity: 100%;
+  }
+
+  .billing_point {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+    opacity: 70%;
+    left: 27.5%;
+    top: 25%;
+  }
+
+  .billing_point:hover {
+    opacity: 100%;
+  }
+
+  .payments_vrf {
+    position: absolute;
+    color: white;
+    opacity: 70%;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+    left: 50%;
+    top: 25%;
+  }
+
+  .payments_vrf:hover {
+    opacity: 100%;
+  }
+
+  .profile_edit {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 70%;
+    font-size: 15px;
+    top: 25%;
+    left: 83%;
+  }
+
+  .profile_edit:hover {
+    opacity: 100%;
+  }
+
+  .verticalLine {
+    border-left: 2.5px solid rgb(56, 56, 56);
+    height: 50px;
+    position: absolute;
+    left: 78%;
+  }
+
+  
+  @media only screen and (max-device-width:480px)
+  {
+    #num_imp
+    {
       position: absolute;
-      opacity: 70%;
-      transition: 0.5s;
-      left: 2%;
-      top: 25%;
+      left:1%;
     }
-    .admin_panel:hover {
-      opacity: 100%;
-    }
-    .billing_point {
-      position: absolute;
-      color: white;
-      text-decoration: none;
-      font-size: 15px;
-      transition: 0.5s;
-      opacity: 70%;
-      left: 27.5%;
-      top: 25%;
-    }
-    .billing_point:hover {
-      opacity: 100%;
-    }
-    .payments_vrf {
-      position: absolute;
-      color: white;
-      opacity: 70%;
-      text-decoration: none;
-      font-size: 15px;
-      transition: 0.5s;
-      left: 50%;
-      top: 25%;
-    }
-    .payments_vrf:hover {
-      opacity: 100%;
-    }
-    .profile_edit {
-      position: absolute;
-      color: white;
-      text-decoration: none;
-      transition: 0.5s;
-      opacity: 70%;
-      font-size: 15px;
-      top: 25%;
-      left: 83%;
-    }
-    .profile_edit:hover {
-      opacity: 100%;
-    }
-    .verticalLine {
-      border-left: 2.5px solid rgb(56, 56, 56);
-      height: 50px;
-      position: absolute;
-      left: 78%;
-    }
+  }
 </style>
 <script>
-    function myFunction() {
-/ Declare variables
-var input, filter, table, tr, td, i, txtValue;
-input = document. getElementById("myInput");
-filter = input.value.toUpperCase ();
-table = document.getElementById ("myTable");
-tr =
-table.getElementsByTagName("tr");
-I Loop through all table rows, and hide those who don't match the search query
-for (i = 0; i < tr.length; it+) {
-td =
-tr [i].getElementsByTagName ("td") [0];
-if (td) {
-txtValue = td.textContent
-td.innerText;
-if (txtValue.toUpperCase().index0f(filter)
->-1) {
-tr[i].style.display = "'"';
-} else {
-tr[i].style.display = "none";
-?
-}
-}
+  function num_filter() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("num_inp");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  function date_filter() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("str_inp");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[3];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+
+  }
 </script>
+
 </html>
