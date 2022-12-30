@@ -20,9 +20,10 @@
     </div>
 </body>
 <style>
-    .login{
-        border:none;
+    .login {
+        border: none;
     }
+
     #username {
         position: absolute;
         left: 40%;
@@ -71,6 +72,58 @@
         position: absolute;
         left: 41.1%;
         top: 42%;
+    }
+
+    @media only screen and (max-device-width:480px) {
+        #username {
+            position: absolute;
+            left: 20%;
+            top: 30%;
+            width: 6cm;
+            height: 1cm;
+            border-top-left-radius: 0.2cm;
+            border-top-right-radius: 0.2cm;
+            border-bottom-left-radius: 0.2cm;
+            border-bottom-right-radius: 0.2cm;
+            font-size: 17px;
+        }
+
+        #username::placeholder {
+            font-size: 16px;
+        }
+
+        #password {
+            position: absolute;
+            left: 20%;
+            top: 38%;
+            width: 6cm;
+            height: 1cm;
+            border-top-left-radius: 0.2cm;
+            border-top-right-radius: 0.2cm;
+            border-bottom-left-radius: 0.2cm;
+            border-bottom-right-radius: 0.2cm;
+            font-size: 17px;
+        }
+
+        #password::placeholder {
+            font-size: 17px;
+        }
+
+        #login_btn {
+            width: 5cm;
+            height: 1cm;
+            font-size: 16px;
+            color: white;
+            background-color: rgb(89, 89, 248);
+            border: 0;
+            border-top-left-radius: 0.2cm;
+            border-top-right-radius: 0.2cm;
+            border-bottom-left-radius: 0.2cm;
+            border-bottom-right-radius: 0.2cm;
+            position: absolute;
+            left: 25%;
+            top: 45%;
+        }
     }
 </style>
 <script>
